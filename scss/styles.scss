@@ -34,7 +34,7 @@
 */
 
 // Define base and accent colors
-$base-color: #3498db;
+$base-color: #424242; //#3498db;
 $base-color-hover: darken($base-color, 10%);
 
 // Define background colors
@@ -154,7 +154,7 @@ header {
 
     ul {
         display: inline-block;
-        background: $background;
+        background: transparent;//$background;
         text-align: center;
         padding: 10px;
         margin: 0;
@@ -168,7 +168,7 @@ header {
 
     a {
         display: block;
-        color: $base-color;
+        color: #828282;//$base-color;
         padding: 10px;
 
         &:hover {
@@ -186,6 +186,7 @@ header {
 
     &.active {
         display: block;
+	background: $background;
     }
 
     &.sticky {
@@ -248,6 +249,15 @@ footer {
     }
 }
 
+.footer-contact {
+    padding-top: 20px;
+
+    p {
+        margin: 0;
+	color: $text;
+    }
+}
+
 .top {
     text-align: center;
 
@@ -295,9 +305,10 @@ footer {
 .btn-rounded-white {
     display: inline-block;
     color: #fff;
-    padding: 15px 25px;
-    border: 3px solid #fff;
+    padding: 10px 25px;
+    border: 2px solid #fff;
     border-radius: 30px;
+    margin-top: 30px;
     @include transition();
 
     &:hover {
